@@ -4,9 +4,11 @@
   "description": "A sample Node.js app using Express 4",
   "main": "index.js",
   "scripts": {
-    "start": "node index.js"
+    "start": "node index.js",
+    "postinstall": "bower install"
   },
   "dependencies": {
+    "bower": "^1.4.1",
     "express": "~4.9.x",
     "jade": "^1.9.2"
   },
@@ -22,6 +24,5 @@
     "heroku",
     "express"
   ],
-  "postinstall": "node_modules/.bin/bower install",
   "license": "MIT"
 }
