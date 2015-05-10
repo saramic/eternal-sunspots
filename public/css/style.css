@@ -1,0 +1,35 @@
+.sunspots {
+    background-color: gray;
+    width: 162px;
+    height: 162px;
+    display: inline-block;
+    position: relative;
+}
+.sunspot.active {
+    background-color: white;
+}
+.sunspot {
+    border-radius: 9px;
+    background-color: gray;
+    width: 18px;
+    height: 18px;
+    margin: 2px;
+    position: absolute;
+}
+.x_0 { left: 0px; }
+.x_1 { left: 20px; }
+.x_2 { left: 40px; }
+.x_3 { left: 60px; }
+.x_4 { left: 80px; }
+.x_5 { left: 100px; }
+.x_6 { left: 120px; }
+.x_7 { left: 140px; }
+
+.y_0 { top: 0px; }
+.y_1 { top: 20px; }
+.y_2 { top: 40px; }
+.y_3 { top: 60px; }
+.y_4 { top: 80px; }
+.y_5 { top: 100px; }
+.y_6 { top: 120px; }
+.y_7 { top: 140px; }
