@@ -1,3 +1,20 @@
+# Eternal Sunspots
+
+A sun heliostat powered 8x8 display matrix to celebrate light.
+
+## TODO
+
+  * limit README to important Node Heroku setup instructions
+    * install
+    * foreman start web
+    * DEBUG=express:* foreman start web
+  * mention templating engine - http://jade-lang.com/
+  * link to site http://eternal-sunspots.herokuapp.com/
+  * style up with http://purecss.io/
+  * add database layer for users to save their own "programs"
+  * document any internal services for use in "programs"
+  * how to contribute section
+
 # node-js-getting-started
 
 A barebones Node.js app using [Express 4](http://expressjs.com/).
