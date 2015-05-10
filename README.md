@@ -6,6 +6,8 @@ A sun heliostat powered 8x8 display matrix to celebrate light.
 
   * limit README to important Node Heroku setup instructions
     * install
+        npm install
+        bower install
     * foreman start web
     * DEBUG=express:* foreman start web
   * mention templating engine - http://jade-lang.com/

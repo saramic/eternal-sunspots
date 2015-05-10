@@ -1,0 +1,21 @@
+{
+  "name": "eternal-sunspots",
+  "main": "index.js",
+  "version": "0.1",
+  "homepage": "https://github.com/saramic/eternal-sunspots",
+  "authors": [
+    "Michael Milewski <saramic@gmail.com>"
+  ],
+  "description": "A sun heliostat powered 8x8 display matrix to celebrate light.",
+  "license": "MIT",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "pure": "~0.6.0"
+  }
+}

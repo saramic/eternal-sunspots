@@ -22,5 +22,6 @@
     "heroku",
     "express"
   ],
+  "postinstall": "node_modules/.bin/bower install",
   "license": "MIT"
 }
