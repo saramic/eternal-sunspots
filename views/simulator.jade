@@ -3,16 +3,28 @@ html
   head
     title!=title
     link(rel="stylesheet" href="/css/style.css")
+    link(rel="stylesheet" href="/pure/base.css")
+    link(rel="stylesheet" href="/pure/buttons.css")
+    link(rel="stylesheet" href="/pure/forms.css")
+    link(rel="stylesheet" href="/pure/menus.css")
 
   body
     #sunspots.sunspots
-    textarea#simulator-input
-    button(onClick="javascript:Demo.fetchJs('simulator-input', 'demo_0.js', 'Demo0.tick');") load demo 0
-    button(onClick="javascript:Demo.fetchJs('simulator-input', 'demo_1.js', 'Demo1.tick');") load demo 1
-    button(onClick="javascript:Demo.fetchJs('simulator-input', 'demo_2.js', 'Demo2.tick');") load demo 2
-    button(onClick="javascript:Demo.fetchJs('simulator-input', 'demo_3.js', 'Demo3.tick');") load demo 3
-    button(onClick="javascript:Demo.fetchJs('simulator-input', 'demo_4.js', 'Demo4.tick');") load demo 4
-    button(onClick="javascript:Demo.eval('simulator-input');") run
+    form.pure-form
+      textarea#simulator-input.pure-input-1-2
+    ul.pure-menu-list
+      li.pure-menu-item
+        button.pure-button(onClick="javascript:Demo.fetchJs('simulator-input', 'demo_0.js', 'Demo0.tick');") load demo 0
+      li.pure-menu-item
+        button.pure-button(onClick="javascript:Demo.fetchJs('simulator-input', 'demo_1.js', 'Demo1.tick');") load demo 1
+      li.pure-menu-item
+        button.pure-button(onClick="javascript:Demo.fetchJs('simulator-input', 'demo_2.js', 'Demo2.tick');") load demo 2
+      li.pure-menu-item
+        button.pure-button(onClick="javascript:Demo.fetchJs('simulator-input', 'demo_3.js', 'Demo3.tick');") load demo 3
+      li.pure-menu-item
+        button.pure-button(onClick="javascript:Demo.fetchJs('simulator-input', 'demo_4.js', 'Demo4.tick');") load demo 4
+      li.pure-menu-item
+        button.pure-button(onClick="javascript:Demo.eval('simulator-input');") run
 
   script(type="text/javascript" src="/js/demo.js")
   script(type="text/javascript" src="/js/simulator.js")

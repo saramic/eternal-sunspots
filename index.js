@@ -2,6 +2,7 @@ var express = require('express');
 var app = express();
 
 app.use(express.static('public'));
+app.use('/pure', express.static('bower_components/pure'));
 
 app.set('port', (process.env.PORT || 5000));
 
