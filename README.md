@@ -17,6 +17,11 @@ A sun heliostat powered 8x8 display matrix to celebrate light.
   * document any internal services for use in "programs"
   * how to contribute section
 
+## Bugs
+
+  * active reapplied even if it is there
+  * stop button
+
 # node-js-getting-started
 
 A barebones Node.js app using [Express 4](http://expressjs.com/).
