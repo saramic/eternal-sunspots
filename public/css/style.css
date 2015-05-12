@@ -5,6 +5,17 @@
     display: inline-block;
     position: relative;
 }
+#simulator-input {
+    height: 384px;
+    font-family: monospace;
+    width: 100%;
+}
+.program {
+    display: inline-block;
+    vertical-align: top;
+    width: 500px;
+    margin-left: 10px;
+}
 .sunspot.active {
     background-color: white;
 }
