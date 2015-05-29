@@ -1,0 +1,23 @@
+extends layout
+
+block content
+  h1= title
+  p This is Sequelize greeting you :)
+
+  h2 Creating a new character
+  form(action="/characters/create", method="post")
+    input(type="text", name="name")
+    input(type="textarea", name="layout")
+    input(type="submit")
+
+  h2 Characters
+
+  ul
+  each character in characters
+    li
+      a(href="/characters/" + character.id )
+        = character.name
+      | &nbsp;
+      | (
+      a(href="/characters/" + character.id + "/destroy") Destroy
+      | )
