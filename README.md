@@ -20,7 +20,7 @@ A sun heliostat powered 8x8 display matrix to celebrate light.
 ## FEATURES TODO
 
   * character display
-  * character edit
+  * character edit with click through
   * character JSON fetch
   * demo using character
   * demo using BOM api
