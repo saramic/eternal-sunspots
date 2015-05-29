@@ -24,18 +24,18 @@ var Sunspots = (function (my) {
         clear();
         clock = 0;
         refreshIntervalId = setInterval(function () {
-            draw(tickCallback)
+            my.draw(tickCallback)
         }, my.TICK_TIME);
     };
 
-    function draw(tickCallback) {
+    my.draw = function (tickCallback) {
         var matrix = tickCallback(clock, get_matrix());
         for (var rowIndex = 0; rowIndex < my.ROWS; rowIndex++) {
             for (var colIndex = 0; colIndex < my.COLUMNS; colIndex++) {
                 var node = document.getElementById("x_" + colIndex + "_y_" + rowIndex);
                 var index = (my.COLUMNS * rowIndex) + colIndex;
                 var value = matrix[index];
-                if (value === 0) {
+                if (value === 0 || value === "0") {
                     removeClass(node, "active");
                 } else {
                     addClass(node, "active");

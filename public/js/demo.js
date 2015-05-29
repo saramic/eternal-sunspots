@@ -25,3 +25,5 @@ var Demo = (function(my){
     return(my);
 
 }(Demo || {}));
+
+Demo;

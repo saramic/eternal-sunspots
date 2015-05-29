@@ -7,3 +7,11 @@ block content
 
   = character.name
   = character.layout
+
+  = character.layout.length
+
+  #sunspots.sunspots
+
+  script(type="text/javascript" src="/js/simulator.js")
+  script
+    | Sunspots.draw(function() { return '#{character.layout}'.split('')})
