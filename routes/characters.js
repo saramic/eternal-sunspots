@@ -16,30 +16,52 @@ router.post('/create', function(req, res) {
     name: req.param('name'),
     layout: req.param('layout')
   }).then(function() {
-    res.redirect('/');
+    res.redirect('/characters');
   });
 });
 
-router.get('/:character_id', function(req, res) {
-  models.Character.find({
-    where: {id: req.param('character_id')},
-  }).then(function(character) {
-    res.send({name: character.name, layout: character.layout})
-      /*
-    res.render('character', {
-      title: 'Character',
-      character: character
+router.get('/:character_id', function (req, res) {
+        models.Character.find({
+            where: {id: req.param('character_id')}
+        }).then(function (character) {
+            res.render('character', {
+                title: 'Character',
+                character: character
+            });
+        });
     });
-    */
-  });
+
+router.post('/:character_id/update', function (req, res) {
+        models.Character.find({
+            where: {id: req.param('character_id')}
+        }).then(function (character) {
+            if (character) {
+                character.updateAttributes({
+                    layout: req.param('layout')
+                }).then(function() {
+                    res.redirect('/characters/'+req.param('character_id')+'/edit')
+                });
+            }
+        });
+    });
+
+router.get('/:character_id/edit', function(req, res) {
+    models.Character.find({
+        where: {id: req.param('character_id')}
+    }).then(function(character) {
+         res.render('edit', {
+         title: 'Character',
+         character: character
+         });
+    });
 });
 
 router.get('/:character_id/destroy', function(req, res) {
   models.Character.find({
-    where: {id: req.param('character_id')},
+    where: {id: req.param('character_id')}
   }).then(function(character) {
     character.destroy().then(function() {
-      res.redirect('/');
+      res.redirect('/characters');
     });
   });
 });

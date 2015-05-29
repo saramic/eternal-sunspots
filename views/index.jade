@@ -2,7 +2,6 @@ extends layout
 
 block content
   h1= title
-  p This is Sequelize greeting you :)
 
   h2 Creating a new character
   form(action="/characters/create", method="post")
@@ -17,7 +16,8 @@ block content
     li
       a(href="/characters/" + character.id )
         = character.name
-      | &nbsp;
-      | (
-      a(href="/characters/" + character.id + "/destroy") Destroy
-      | )
+        = character.layout
+      //| &nbsp;
+      //| (
+      //a(href="/characters/" + character.id + "/destroy") Destroy
+      //| )
