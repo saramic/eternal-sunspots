@@ -17,6 +17,25 @@ A sun heliostat powered 8x8 display matrix to celebrate light.
   * document any internal services for use in "programs"
   * how to contribute section
 
+## FEATURES TODO
+
+  * character display
+  * character edit
+  * character JSON fetch
+  * demo using character
+  * demo using BOM api
+  * Melbourne default http://eternal-sunspots.herokuapp.com/services/bom
+  * http://eternal-sunspots.herokuapp.com/services/bom?state=vic&city=wangaratta
+  * twitter API
+    * http://www.apcoder.com/2013/10/03/twitter-bot-20-minutes-node-js/
+    * https://github.com/ttezel/twit
+    * https://www.npmjs.com/package/twitter
+    * https://www.npmjs.com/package/node-twitter-api
+  * program CRUD
+  * user and permissions - to stop stuff being deleted
+
+  * get matrix letters input
+    * https://www.google.com.au/search?q=dot+matrix+alphabet&es_sm=91&tbm=isch&imgil=fzvR65_E48fT0M%253A%253BQHX8hQ_N1xxlIM%253Bhttp%25253A%25252F%25252Fwww.dreamstime.com%25252Froyalty-free-stock-photos-dot-matrix-font-image2896258&source=iu&pf=m&fir=fzvR65_E48fT0M%253A%252CQHX8hQ_N1xxlIM%252C_&usg=__fycMsE6pOmw1kKcGHYEtHd4zc3A%3D&biw=1440&bih=802&ved=0CCkQyjc&ei=KdNnVYOTDM_38QWShIKwAg#imgrc=0AssQRlqSDOsEM%253A%3BjUBfT3p6DvangM%3Bhttp%253A%252F%252Fthumbs.dreamstime.com%252Fz%252Fdot-matrix-font-2896263.jpg%3Bhttp%253A%252F%252Fwww.dreamstime.com%252Fstock-photos-dot-matrix-font-image2896263%3B1257%3B1300
 ## Bugs
 
   * active reapplied even if it is there
