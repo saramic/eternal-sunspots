@@ -11,7 +11,7 @@ var Demo = (function(my){
     }
 
     function writeToSimulatorInput(elementId, text, runText) {
-        document.getElementById(elementId).value = text + runText;
+        myCodeMirror.setValue(text + runText);
     }
 
     my.fetchJs = function(elementId, jsPath, call) {

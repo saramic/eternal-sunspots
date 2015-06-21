@@ -16,6 +16,9 @@ app.set('views', path.join(__dirname, 'views'));
 app.set('view engine', 'jade');
 
 app.use('/pure', express.static('bower_components/pure'));
+app.use('/jquery', express.static('bower_components/jquery'));
+app.use('/underscore', express.static('bower_components/underscore'));
+app.use('/codemirror', express.static('bower_components/codemirror'));
 
 // uncomment after placing your favicon in /public
 //app.use(favicon(__dirname + '/public/favicon.ico'));

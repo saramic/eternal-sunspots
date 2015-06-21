@@ -12,7 +12,13 @@ html
     link(rel="stylesheet" href="/pure/menus.css")
     link(rel="stylesheet" href="/pure/grids-responsive.css")
 
+    block head
+
   body
     include ./includes/head.jade
     block content
     include ./includes/foot.jade
+
+    script(type="text/javascript" src="/underscore/underscore-min.js")
+    script(type="text/javascript" src="/jquery/dist/jquery.min.js")
+    block javascript

@@ -5,16 +5,22 @@ var Sunspots = (function (my) {
     my.COLUMNS = 8;
     my.ROWS = 8;
 
+    function createSpotElement(colIndex, rowIndex) {
+        var node = document.createElement("DIV");
+        var id = "x_" + colIndex + "_y_" + rowIndex;
+        node.id = id;
+        node.className = "sunspot x_" + colIndex + " y_" + rowIndex;
+        node.setAttribute('data-edit', 'true');
+        return node
+    }
+
     my.init = function (divId) {
         clock = 0;
 
         elem = document.getElementById(divId);
         for (var rowIndex = 0; rowIndex < my.ROWS; rowIndex++) {
             for (var colIndex = 0; colIndex < my.COLUMNS; colIndex++) {
-                var node = document.createElement("DIV");
-                var id = "x_" + colIndex + "_y_" + rowIndex;
-                node.id = id;
-                node.className = "sunspot x_" + colIndex + " y_" + rowIndex;
+                var node = createSpotElement(colIndex, rowIndex);
                 elem.appendChild(node);
             }
         }
@@ -29,7 +35,7 @@ var Sunspots = (function (my) {
     };
 
     my.draw = function (tickCallback) {
-        var matrix = tickCallback(clock, get_matrix());
+        var matrix = tickCallback(clock, my.get_matrix());
         for (var rowIndex = 0; rowIndex < my.ROWS; rowIndex++) {
             for (var colIndex = 0; colIndex < my.COLUMNS; colIndex++) {
                 var node = document.getElementById("x_" + colIndex + "_y_" + rowIndex);
@@ -55,7 +61,7 @@ var Sunspots = (function (my) {
         }
     }
 
-    function get_matrix() {
+    my.get_matrix = function() {
         var matrix = [];
         for (var rowIndex = 0; rowIndex < my.ROWS; rowIndex++) {
             for (var colIndex = 0; colIndex < my.COLUMNS; colIndex++) {
@@ -80,7 +86,9 @@ var Sunspots = (function (my) {
     }
 
     function addClass(node, className) {
-        node.className += " " + className;
+        if (!hasClass(node, className)) {
+            node.className += " " + className;
+        }
     }
 
     return (my);

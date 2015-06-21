@@ -5,5 +5,14 @@ block content
     form(action="/characters/#{character.id}/update", method="post")
         input(type="hidden", name="_method" value="put")
         input(type="text", name="name" value=character.name)
-        input(type="textarea", name="layout" value=character.layout)
+        input(type="hidden", name="layout" value=character.layout)
         input(type="submit")
+
+        #sunspots.sunspots
+
+block javascript
+    script(type="text/javascript" src="/js/simulator.js")
+    script
+        | Sunspots.draw(function() { return '#{character.layout}'.split(',')})
+        | _.each($('[data-edit="true"]'), function(e) { $(e).click(function(f) { $(this).toggleClass('active');  }) })
+        | $('form input[type="submit"]').click( function(e) { $('form input[name="layout"]').val(Sunspots.get_matrix()) } )
